@@ -1,48 +1,48 @@
 *{
-    background: #F3F5FC;
+    background: #F3F5FC; /* Esto no se debe hacer*/
     padding: 10px 0;
     font-family: Inter;
     box-sizing: border-box;
 }
 .encabezado{
-    width: 940px;
+    width: 940px; /* No pongas medidas fijas cuando van a ser muy grandes. Tienen que ser proporcionales, o sea, usando porcentajes (%, vw, vh, dvw, dvh)*/
     margin: 0 auto;
     padding: 50px;
 }
 .logo{
     position: absolute;
     top:40px;
-    left: 40px;;
+    left: 40px;; /* Aquí hay un punto y coma demás pero no debería haber problema*/
 }
 
 .cajasTexto{
-    width: 940px;
+    width: 940px; /* Tal y como puse arriba usa porcentajes. Si 940 es el tamaño de tu pantalla pon 100% para que sea el tamaño de la pantalla de cualquier dispositivo*/
     margin: 0 auto;
     padding: 50px;
 }
 
 
 .cajasTexto textarea{
-    display: inline-block;
+    display: inline-block; /* No uses inline, utiliza flex en el elemento padre para que se acomoden uno tras de otro */
     padding: 30px 20px;
 }
 
 .cajaIngreso{
 
-position: absolute;
-width: 577px;
-height: 118px;
+position: absolute; /* No utilices absolute a no ser que sea para poner decoraciones en las esquinas o un elemento en medio de otro elemento o en medio de la pantalla*/
+width: 577px; /* Esto tiene que ir con medidas proporcionales*/
+height: 118px; /* Esto también tiene que ir con medidas proporcionales*/
 left: 240px;
 top: 168px;
 border: none;
 outline: none;
 opacity: 0px;
 color: #0A3871;
-font-family: 'Inter';
+font-family: 'Inter'; /* Tienes el font-family en la etiqueta asterisco (*), por lo que ya tienes esta fuente en este elemento*/
 font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 150%;
+font-weight: 400; /* Este es el font-weight por defecto */
+font-size: 32px; /* Este es el doble de la medida de una letra normal, por lo que lo correcto es usar 2rem y no 32px. 1rem es la medida de las letras, por eso es mejor medir las fuentes en rem*/
+line-height: 150%; /* El line height es el tamaño de cada linea de tu elemento para escribir, estás multiplicando tu lineheight por 1.5, lo mejor es poner line-height 2rem, ya que es el tamaño de la fuente que estás usando*/
 }
 
 
