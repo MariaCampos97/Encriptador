@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} /*Esto está  bien, gracias por tomarlo en cuenta jajaja*/
 :root {
-    background: #F3F5FC;
+    background-color: #F3F5FC; /*Para solo poner el color tiene que usar la propiedad background-color*/
   }
 
 .logo{
@@ -168,19 +168,19 @@ margin-left: 55%;
 /* Media Queries */
 
 /* Pantallas más pequeñas */
-@media screen and(max-width: 1199px) {
+@media screen and(max-width: 1199px) { 
 .logo {
   margin-top: 3%;
   margin-bottom: 7%;
   position: static;
 }
-header {
+header { /*Esta etiqueta no está cerrada, lo que provoca que el media query no funcione*/
   width: 100%;
 
-.pie{
-    width: auto;
-    bottom: 0;
-}
+    .pie{
+        width: auto;
+        bottom: 0;
+    }
 }
 
 .img-msj-encrypt-section {
