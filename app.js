@@ -26,7 +26,7 @@ function btnEncriptar(){
 function encriptar (stringEncriptado){
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
    //Convertir textos a miniscula
-    stringEncriptado = stringEncriptado.toLowerCase();
+    stringEncriptado = stringEncriptado.toLowerCase(/[^a-z\s]/g, '');
    //Inicia en cero, debe ser menor que nuestra matriz codigo e ingrementar para que recorra la matriz
     for (let i = 0; i < matrizCodigo.length; i++){
         if(stringEncriptado.includes(matrizCodigo[i][0])){
@@ -53,7 +53,7 @@ function btnDesencriptar(){
 function desencriptar (stringDesencriptado){
     let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
    //Convertir textos a miniscula
-    stringDesencriptado = stringDesencriptado.toLowerCase();
+    stringDesencriptado = stringDesencriptado.toLowerCase(/[^a-z\s]/g, '');
    //Inicia en cero, debe ser menor que nuestra matriz codigo e ingrementar para que recorra la matriz
     for (let i = 0; i < matrizCodigo.length; i++){
         if(stringDesencriptado.includes(matrizCodigo[i][1])){
