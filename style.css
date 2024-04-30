@@ -168,25 +168,74 @@ margin-left: 55%;
 /* Media Queries */
 
 /* Pantallas más pequeñas */
-@media screen and(max-width: 1199px) {
-.logo {
-  margin-top: 3%;
-  margin-bottom: 7%;
-  position: static;
-}
-header {
-  width: 100%;
+ @media screen and (max-width: 480px) {
 
-.pie{
-    width: auto;
-    bottom: 0;
-}
-}
+        /* Modificaciones para el logo */
+        .logo {
+            position: static;
+            top: initial;
+            left: initial;
+            width: 10%; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+    
+        /* Modificaciones para las cajas de texto */
+        .cajasTexto {
+            padding: 20px; 
+        }
+    
+        .cajasTexto textarea {
+            padding: 10px; 
+        }
+    
+        /* Modificaciones para la caja de ingreso */
+        .cajaIngreso {
+            position: relative; 
+            width: 100%; 
+            height: auto; 
+            left: initial;
+            top: initial;
+            margin: 20px 0; 
+        }
 
-.img-msj-encrypt-section {
-display: block;
-}
+            
+        /* Modificaciones para los botones */
+        .botones {
+            position: relative;
+            width: 100%; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+    
+        /* Modificaciones para la caja de resultado */
+        .cajaResultado {
+            position: relative;
+            background-image: none;
+            width: 100%; 
+            height: auto; 
+            left: initial;
+            top: initial;
+            margin: 20px 0; 
+        }
 
-.msj-encrypt-section {
-display: none;
-}
+        .btn-encriptar,
+        .btn-desencriptar,
+        .copiar {
+            width: 100%; 
+            margin: 10px 0; 
+        }
+    
+        /* Modificaciones para el pie de página */
+        .pie {
+            position: static; 
+            width: 100%; 
+        }
+    
+        /* Modificaciones para la advertencia */
+        .advertencia {
+            width: 100%; 
+            top: initial;
+            margin: 20px 0; 
+    }
+ }

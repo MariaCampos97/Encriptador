@@ -64,6 +64,8 @@ function desencriptar (stringDesencriptado){
     return stringDesencriptado;
 }
 
+//Limpiar Caja de texto
+
 
 //Copiar
 
@@ -77,7 +79,9 @@ function desencriptar (stringDesencriptado){
 
     // No necesitas la alerta si el copiado fue exitoso, puedes simplemente indicarlo en la interfaz
     alert("Texto copiado: " + copyText.value);
+
 }
 
 // Asignar el evento click a tu botón de copiar
 document.querySelector('.copiar').addEventListener('click', btnCopiar);
+
