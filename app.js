@@ -23,15 +23,18 @@ function btnEncriptar(){
 }
 
 
-function encriptar (stringEncriptado){
-    let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
-   //Convertir textos a miniscula
-    stringEncriptado = stringEncriptado.toLowerCase(/[^a-z\s]/g, '');
-   //Inicia en cero, debe ser menor que nuestra matriz codigo e ingrementar para que recorra la matriz
-    for (let i = 0; i < matrizCodigo.length; i++){
-        if(stringEncriptado.includes(matrizCodigo[i][0])){
-            //Sustitucion de las letras, 
-            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0],matrizCodigo[i][1])
+function encriptar(stringEncriptado) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    if (/[^\sa-z]/.test(stringEncriptado) || /[A-Z]/.test(stringEncriptado)) {
+        alert("No se pueden incluir caracteres especiales ni mayúsculas.");
+        return null; 
+    }
+
+    // Inicia en cero, debe ser menor que nuestra matriz codigo e incrementar para que recorra la matriz
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringEncriptado.includes(matrizCodigo[i][0])) {
+            // Sustitucion de las letras
+            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
     }
     return stringEncriptado;
@@ -50,21 +53,23 @@ function btnDesencriptar(){
 }
 
 
-function desencriptar (stringDesencriptado){
-    let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
-   //Convertir textos a miniscula
-    stringDesencriptado = stringDesencriptado.toLowerCase(/[^a-z\s]/g, '');
-   //Inicia en cero, debe ser menor que nuestra matriz codigo e ingrementar para que recorra la matriz
-    for (let i = 0; i < matrizCodigo.length; i++){
-        if(stringDesencriptado.includes(matrizCodigo[i][1])){
-            //Sustitucion de las letras, 
-            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1],matrizCodigo[i][0])
+function desencriptar(stringDesencriptado) {
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+
+    if (/[^\sa-z]/.test(stringDesencriptado) || /[A-Z]/.test(stringDesencriptado)) {
+        alert("No se pueden incluir caracteres especiales ni mayúsculas.");
+        return null; 
+    }
+
+    // Inicia en cero, debe ser menor que nuestra matriz codigo e incrementar para que recorra la matriz
+    for (let i = 0; i < matrizCodigo.length; i++) {
+        if (stringDesencriptado.includes(matrizCodigo[i][1])) {
+            // Sustitucion de las letras
+            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
     }
     return stringDesencriptado;
 }
-
-//Limpiar Caja de texto
 
 
 //Copiar

@@ -168,7 +168,7 @@ margin-left: 55%;
 /* Media Queries */
 
 /* Pantallas más pequeñas */
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 1199px) {
 
         /* Modificaciones para el logo */
         .logo {
@@ -181,12 +181,20 @@ margin-left: 55%;
         }
     
         /* Modificaciones para las cajas de texto */
-        .cajasTexto {
+        
+        .cajaIngreso
+        .cajaResultado
+        .advertencia
+        .botones {
             padding: 20px; 
+            display: flex;
+            flex-direction: column;
         }
     
         .cajasTexto textarea {
             padding: 10px; 
+            resize: none;
+            outline: none;
         }
     
         /* Modificaciones para la caja de ingreso */
@@ -196,7 +204,8 @@ margin-left: 55%;
             height: auto; 
             left: initial;
             top: initial;
-            margin: 20px 0; 
+            margin: 20px 0;
+            order: 0; 
         }
 
             
@@ -204,38 +213,49 @@ margin-left: 55%;
         .botones {
             position: relative;
             width: 100%; 
-            flex-direction: column; 
-            align-items: center; 
+            display: flex;
+            flex-direction: column;
+            left: initial;
+            top: initial;
+            order: 2;
         }
     
         /* Modificaciones para la caja de resultado */
         .cajaResultado {
             position: relative;
             background-image: none;
-            width: 100%; 
-            height: auto; 
+            width: 100%;  
             left: initial;
-            top: initial;
             margin: 20px 0; 
+            order: 3;
         }
+         .cajaResultado::placeholder{
+            position: relative;
+         }
+         
 
         .btn-encriptar,
         .btn-desencriptar,
         .copiar {
             width: 100%; 
             margin: 10px 0; 
+            padding: 2%;
         }
-    
-        /* Modificaciones para el pie de página */
-        .pie {
-            position: static; 
-            width: 100%; 
-        }
+
     
         /* Modificaciones para la advertencia */
         .advertencia {
+            position: relative;
+            order: 1;
             width: 100%; 
             top: initial;
+            left: initial;
             margin: 20px 0; 
+    }
+
+    footer{
+        margin-top: auto;
+        width: 100%;
+        bottom: 0% ;
     }
  }
