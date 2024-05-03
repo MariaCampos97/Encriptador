@@ -17,10 +17,9 @@
     </header>
 
     <main>
-         <div class="cajasTexto">
+        <section class="entrada">
+         <div >
           <textarea id="input-usuario" class="cajaIngreso" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-          <textarea id="contenedor-output" class="cajaResultado" id="" cols="30" rows="10" placeholder= "Ningún mensaje fue encontrado. 
-Ingresa el texto que desees encriptar o desencriptar"></textarea>
          </div> 
 
          <div>
@@ -29,14 +28,19 @@ Ingresa el texto que desees encriptar o desencriptar"></textarea>
                 Solo letras minúsculas y sin acentos
             </label>
         </div>
+        
 
         <div class="botones">
                 <button id="boton-encriptar"  class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
                 <button id="boton-desencriptar" class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-                <button class="copiar" onclick="btnCopiar()"> Copiar</button>
-
          </div>
-         
+        </section>
+        <section class="salida">
+         <textarea id="contenedor-output" class="cajaResultado" id="" cols="30" rows="10" placeholder= "Ningún mensaje fue encontrado. 
+Ingresa el texto que desees encriptar o desencriptar"></textarea>
+                <button class="copiar" onclick="btnCopiar()"> Copiar</button>
+            </section>
+
     </main>
 
     <footer class="pie">&copy Copyright María Campos - 2024 </footer>

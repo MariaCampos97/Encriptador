@@ -54,7 +54,7 @@ function btnDesencriptar(){
 
 
 function desencriptar(stringDesencriptado) {
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    let matrizCodigo = [["u", "ufat"], ["o", "ober"], ["a", "ai"], ["i", "imes"], ["e", "enter"]];
 
     if (/[^\sa-z]/.test(stringDesencriptado) || /[A-Z]/.test(stringDesencriptado)) {
         alert("No se pueden incluir caracteres especiales ni mayúsculas.");
@@ -84,6 +84,7 @@ function desencriptar(stringDesencriptado) {
 
     // No necesitas la alerta si el copiado fue exitoso, puedes simplemente indicarlo en la interfaz
     alert("Texto copiado: " + copyText.value);
+    
 
 }
 

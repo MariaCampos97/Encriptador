@@ -1,156 +1,141 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 :root {
     background: #F3F5FC;
   }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+}
+
 .logo{
-    position: absolute;
-    top:40px;
-    left: 40px;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 5%;
 }
-
-
 main{
-    margin: auto;
-}
-.cajasTexto{
-    width: 100%;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-
-.cajasTexto textarea{
     display: flex;
-    overflow: block;  
-    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.entrada,
+.salida{
+    justify-content: center;
+    height: 88vh;
+}
+
+.entrada{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 85%;
 }
 
 .cajaIngreso{
-    margin: auto;
-position: fixed;
-width:30%;
-height: 70%;
-left: 340px;
-top: 168px;
-border: none;
-outline: none;
-opacity: 100px;
-color: #0A3871;
-background: none;
-font-family: 'Inter';
-font-style: normal;
-font-size: 2rem;
-line-height: 2rem;
+    height: 85%;
+    resize: none;
+   border: none;
+   outline: none;
+   opacity: 100px;
+   color: #0A3871;
+   background: none;
+   font-family: 'Inter';
+   font-style: normal;
+   font-size: 2rem;
+   line-height: 2rem;
 }
 
 .cajaIngreso::placeholder{
     color: #0A3871;
 }
 
+.advertencia{
+    color: #495057;
+    }
 
-.cajaResultado{
-    margin: auto;
-position: fixed;
-width: 20%;
-height: 90%;
-left: 1400px;
-top: 40px;
-background: #FFFFFF;
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height: 40px;
+}
+
+.btn-encriptar{
+    flex: none;
+    flex-grow: 0;
+    font-size: 1rem;
+    background-color: #0A3871;
+    border: 1px solid  #0A3871;
+    border-radius: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 100%;
+    width: 40%;
+    }
+
+ .btn-desencriptar{
+        flex: none;
+        flex-grow: 0;
+        font-size: 1rem;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        color: #0A3871;
+        cursor: pointer;
+        margin-left: 30px;
+        height: 100%;
+        width: 40%;
+
+        }
+    
+ .salida{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+ }
+
+ .cajaResultado{
+    width: 70%;
+    height: 90%;
+    background: #FFFFFF;
 background-image: url(imagenes/Muñeco.png);
 background-repeat: no-repeat;
 background-position: center;
 border: none;
 box-shadow: 0px 24px 32px -8px ;
-border-radius: 32px;
+border-radius: 16px;
 outline: none;
 color: #0A3871;
 font-size: 2rem;
 line-height: 2rem;
+resize: none;
 }
 
 .cajaResultado::placeholder{
-    position: fixed;
+    position: absolute;
     text-align: center;
-    bottom:20%;
     font-size: 1rem;
     color:#495057;
     font-weight: bold;
-    gap: 16px;
-}
-
-.advertencia{
-    position: fixed;
-width: 25%;
-height: 2%;
-left: 340px;
-top: 851px;
-color: #495057;
-}
-
-.botones {
-    display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 24px;
-
-position: absolute;
-width: 680px;
-height: 67px;
-left: 340px;
-top: 885px;
-}
-
-.btn-encriptar{
-flex: none;
-order: 0;
-flex-grow: 0;
-font-size: 1rem;
-background-color: #0A3871;
-border: 1px solid  #0A3871;
-border-radius: 24px;
-color: #FFFFFF;
-cursor: pointer;
-height: 100%;
-width: 50%;
-}
-
-
-.btn-desencriptar{
-flex: none;
-order: 1;
-flex-grow: 0;
-font-size: 1rem;
-background: #D8DFE8;
-border: 1px solid #0A3871;
-border-radius: 24px;
-color: #0A3871;
-cursor: pointer;
-height: 100%;
-margin-left: 30px;
-width: 50%;
+    bottom: 5%;
+    padding: 3%;
 }
 
 .copiar{
-    flex: none;
-order: 3;
-flex-grow: 0;
+    width: 30%;
+    height: 5% ;
 font-size: 1rem;
 background-color: #0A3871;
 border: 1px solid  #0A3871;
 border-radius: 24px;
 color: #FFFFFF;
 cursor: pointer;
-height: 100%;
-width: 50%;
-margin-left: 55%;
-
-
 }
 
 .pie{
@@ -159,103 +144,57 @@ margin-left: 55%;
     font-size: 13px;
     text-align: center;
     padding: 5px;
-    position: absolute;
-    bottom: 0; /* Posicionar el pie de página al fondo */
-    width: 100%;;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entrada,
+    .salida{
+        width: 95%;
+        height: 47vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 60%;
+        margin: 10px 0;
+    }
+
+    .salida{
+        justify-content: center;
+    }
+    .cajaIngreso,
+    .cajaResultado {
+        width: 90%;
+        background-image: none;
+    }
+
+    .cajaResultado{
+        height: 40%;
+    
+    }
+
+    .copiar {
+        width: 60%;
+        margin: 10px 0;
+    }
 }
 
 
-/* Media Queries */
 
-/* Pantallas más pequeñas */
- @media screen and (max-width: 1199px) {
 
-        /* Modificaciones para el logo */
-        .logo {
-            position: static;
-            top: initial;
-            left: initial;
-            width: 10%; 
-            text-align: center; 
-            margin-bottom: 20px; 
-        }
-    
-        /* Modificaciones para las cajas de texto */
-        
-        .cajaIngreso
-        .cajaResultado
-        .advertencia
-        .botones {
-            padding: 20px; 
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .cajasTexto textarea {
-            padding: 10px; 
-            resize: none;
-            outline: none;
-        }
-    
-        /* Modificaciones para la caja de ingreso */
-        .cajaIngreso {
-            position: relative; 
-            width: 100%; 
-            height: auto; 
-            left: initial;
-            top: initial;
-            margin: 20px 0;
-            order: 0; 
-        }
 
-            
-        /* Modificaciones para los botones */
-        .botones {
-            position: relative;
-            width: 100%; 
-            display: flex;
-            flex-direction: column;
-            left: initial;
-            top: initial;
-            order: 2;
-        }
-    
-        /* Modificaciones para la caja de resultado */
-        .cajaResultado {
-            position: relative;
-            background-image: none;
-            width: 100%;  
-            left: initial;
-            margin: 20px 0; 
-            order: 3;
-        }
-         .cajaResultado::placeholder{
-            position: relative;
-         }
-         
-
-        .btn-encriptar,
-        .btn-desencriptar,
-        .copiar {
-            width: 100%; 
-            margin: 10px 0; 
-            padding: 2%;
-        }
-
-    
-        /* Modificaciones para la advertencia */
-        .advertencia {
-            position: relative;
-            order: 1;
-            width: 100%; 
-            top: initial;
-            left: initial;
-            margin: 20px 0; 
-    }
-
-    footer{
-        margin-top: auto;
-        width: 100%;
-        bottom: 0% ;
-    }
- }
