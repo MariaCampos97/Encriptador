@@ -155,10 +155,14 @@ cursor: pointer;
         flex-direction: column;
     }
 
-    .entrada,
+    .entrada{
+        width: 95%;
+        height: 55vh;
+        align-items: center;
+    }
     .salida{
         width: 95%;
-        height: 47vh;
+        height: 35vh;
         align-items: center;
     }
 
