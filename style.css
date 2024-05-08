@@ -157,13 +157,18 @@ cursor: pointer;
 
     .entrada{
         width: 95%;
-        height: 55vh;
+        height: 50vh;
         align-items: center;
     }
     .salida{
         width: 95%;
-        height: 35vh;
+        height: 30vh;
         align-items: center;
+    }
+
+    .entrada
+    .salida{
+        justify-content: space-between;
     }
 
     .botones{
@@ -177,9 +182,6 @@ cursor: pointer;
         margin: 10px 0;
     }
 
-    .salida{
-        justify-content: center;
-    }
     .cajaIngreso,
     .cajaResultado {
         width: 90%;
