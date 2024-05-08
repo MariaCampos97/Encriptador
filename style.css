@@ -168,6 +168,10 @@ cursor: pointer;
         margin-bottom: 5em;
     }
 
+    .salida{
+        margin-bottom: 2em;
+    }
+
     .botones{
         display: flex;
         flex-direction: column;
@@ -185,6 +189,10 @@ cursor: pointer;
         background-image: none;
     }
 
+    .cajaResultado{
+        margin-top: 1em;
+        height: 5em;
+    }
 
     .copiar {
         width: 60%;
