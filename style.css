@@ -159,7 +159,6 @@ cursor: pointer;
     .salida{
         width: 95%;
         height: 47vh;
-        justify-content: space-between;
         align-items: center;
     }
 
