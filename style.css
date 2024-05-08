@@ -152,23 +152,20 @@ cursor: pointer;
 
     main{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
     }
 
-    .entrada{
-        width: 95%;
-        height: 60vh;
-        align-items: center;
-    }
+    .entrada,
     .salida{
         width: 95%;
-        height: 25vh;
         align-items: center;
+        justify-content: space-between;
+        height: 45%;
     }
 
-    .entrada
-    .salida{
-        justify-content: space-between;
+    .entrada{
+        margin-bottom: 5em;
     }
 
     .botones{
@@ -188,10 +185,6 @@ cursor: pointer;
         background-image: none;
     }
 
-    .cajaResultado{
-        height: 40%;
-    
-    }
 
     .copiar {
         width: 60%;
